@@ -21,7 +21,7 @@ func Get_Quote() {
 	body, _ := ioutil.ReadAll(res.Body)
 	var qt types.Quote
 	json.Unmarshal(body, &qt)
-	c("%v\n   - %v", qt.Quote, qt.Character)
+	c("%v\n   - %v\n\n", qt.Quote, qt.Character)
 }
 
 func TestQuote() {
